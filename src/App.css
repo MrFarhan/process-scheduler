@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+  margin: 2rem;
+}
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+form {
+  margin: 1rem 0;
+}
+
+input {
+  margin-right: 1rem;
+  padding: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
