@@ -4,6 +4,7 @@ function AddProcessForm({ addProcess }) {
     const [processId, setProcessId] = useState('');
     const [cpuBurst, setCpuBurst] = useState('');
     const [arrivalTime, setArrivalTime] = useState('');
+    const [priority, setPriority] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -11,12 +12,14 @@ function AddProcessForm({ addProcess }) {
             id: processId,
             cpuBurst: parseInt(cpuBurst),
             arrivalTime: parseInt(arrivalTime),
+            priority: parseInt(priority),
             state: 'Ready',
         };
         addProcess(newProcess);
         setProcessId('');
         setCpuBurst('');
         setArrivalTime('');
+        setPriority('');
     };
 
     return (
@@ -40,6 +43,13 @@ function AddProcessForm({ addProcess }) {
                 placeholder="Arrival Time"
                 value={arrivalTime}
                 onChange={(e) => setArrivalTime(e.target.value)}
+                required
+            />
+            <input
+                type="number"
+                placeholder="Priority (lower is higher priority)"
+                value={priority}
+                onChange={(e) => setPriority(e.target.value)}
                 required
             />
             <button type="submit">Add Process</button>
